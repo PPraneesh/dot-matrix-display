@@ -12,6 +12,14 @@
   --danger-color: #ff3c3c;
 }
 
+h1{
+  padding-bottom: 1rem;
+  margin: 0;
+}
+h2{
+  margin:0;
+  padding-top:1rem;
+}
 body {
   background-color: var(--dark-bg);
   color: var(--text-color);
@@ -46,8 +54,8 @@ body {
 
 .display-preview {
   background-color: var(--panel-bg);
-  border: 2px solid var(--panel-border);
   border-radius: 8px;
+  border: 1px solid var(--panel-border);
   padding: 2rem;
   margin-bottom: 2rem;
   /* box-shadow: 0 0 20px rgba(255, 168, 106, 0.2); */
@@ -56,8 +64,16 @@ body {
 .control-panel {
   background-color: var(--panel-bg);
   border-radius: 8px;
-  padding: 2rem;
   border: 1px solid var(--panel-border);
+  padding: 2rem;
+}
+
+.code-section{
+  background-color: var(--panel-bg);
+  border-radius: 8px;
+  border: 1px solid var(--panel-border);
+  padding: 1rem 2rem;
+  margin: 2rem 0  ;
 }
 
 .duration-control {

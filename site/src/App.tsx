@@ -18,7 +18,6 @@ function App() {
     if (newText.pattern.trim() || newText.secondary_text.trim()) {
       setSavedTexts([...savedTexts, newText]);
       setNewText({ pattern: "", secondary_text: "" });
-      // Force re-render so new items display immediately
       setMatrixKey(prev => prev + 1);
     }
   }
@@ -73,6 +72,7 @@ const texts = [
       </div>
 
       <div className="control-panel">
+        <h1>The Controls</h1>
         <div className="duration-control">
           <label htmlFor="duration">Animation Duration (ms):</label>
           <div className="slider-container">
@@ -89,7 +89,7 @@ const texts = [
           </div>
         </div>
 
-        <div className="new-text-input">
+        <div className="text-entries">
           <h2>Add New Text</h2>
           <div className="text-entry">
             <div className="input-group">
@@ -142,6 +142,7 @@ const texts = [
           ))}
         </div>
 
+      </div>
         <div className="code-section">
           <h2>MatrixDisplay Component Code</h2>
           <pre className="code-block">
@@ -149,7 +150,6 @@ const texts = [
           </pre>
           <button className='copy-code' onClick={copyCode}>Copy Code</button>
         </div>
-      </div>
 
       <footer className="footer">
         <div>

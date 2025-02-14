@@ -2,6 +2,8 @@
 
 A React component that creates a dot matrix display effect for transitioning between text patterns. Perfect for creating retro-style animated displays or information boards.
 
+Try it out [here](https://ppraneesh.github.io/dot-matrix-display/).
+
 ## Installation
 
 ```bash
@@ -10,7 +12,7 @@ npm install dot-matrix-display
 
 ## Usage
 
-```tsx
+```jsx
 import MatrixDisplay from 'dot-matrix-display';
 
 const App = () => {
@@ -44,10 +46,27 @@ const App = () => {
 ### TextItem Interface
 
 ```typescript
-interface TextItem {
-  pattern: string;      // Main text to display in dot matrix, Max length is 6
-  secondary_text: string; // Subtitle or additional text
-}
+import { TextItem } from 'dot-matrix-display';
+
+const App = () => {
+  const texts:TextItem = [
+    {
+      pattern: "HELLO",
+      secondary_text: "Welcome Message"
+    },
+    {
+      pattern: "WORLD",
+      secondary_text: "Second Message"
+    }
+  ];
+
+  return (
+    <MatrixDisplay 
+      texts={texts} 
+      duration={5000} // Optional: defaults to 5000ms
+    />
+  );
+};
 ```
 
 ### Pattern Constraints
@@ -77,4 +96,3 @@ The component comes with default styling that can be customized using CSS. The m
 ## License
 
 MIT
-
