@@ -1,4 +1,6 @@
-const charToBinary = {
+import { CharacterMap } from "../types";
+
+const charToBinary: CharacterMap = {
     " ": [
       [0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0],

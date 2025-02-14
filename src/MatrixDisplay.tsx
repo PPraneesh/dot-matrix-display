@@ -1,20 +1,8 @@
 import charToBinary from './constants/binary';
 import './styles.css'
 import React, { useEffect, useState } from 'react';
-
+import { MatrixDisplayProps, Pattern, CharPattern } from './types';
 // Define interfaces for the data structures
-interface TextItem {
-  pattern: string;
-  secondary_text: string;
-}
-
-interface MatrixDisplayProps {
-  texts: TextItem[];
-  duration?: number; // Duration in milliseconds, optional with default
-}
-
-type Pattern = number[][];
-type CharPattern = number[][];
 
 const createPattern = (text: string): Pattern => {
   const pattern: Pattern = Array.from({ length: 5 }, () => Array.from({ length: 30 }, () => 0));
