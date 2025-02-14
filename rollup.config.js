@@ -6,7 +6,7 @@ import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 
-const PackageJson = require("./package.json");
+import PackageJson from "./package.json" assert { type: "json" };
 
 export default [
   {
@@ -29,13 +29,13 @@ export default [
       resolve(),
       commonjs(),
       terser(),
-      postcss()
+      postcss(),
     ],
     external: ["react", "react-dom"],
   },
   {
     input: "src/index.ts",
-    output: [{ file: PackageJson.types }],
+    output: [{ file: PackageJson.types, format: "es" }],
     plugins: [dts.default()],
     external: [/\.css$/],
   },

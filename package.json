@@ -1,6 +1,6 @@
 {
   "name": "dot-matrix-display",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "DOT MATRIX DISPLAY",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,11 +20,13 @@
     "react": "^19.0.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.8.1",
     "typescript": "^5.7.3"
   },
-  "dependencies": {
-    "rollup-plugin-postcss": "^4.0.2"
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "keywords": [
     "dot-matrix",
