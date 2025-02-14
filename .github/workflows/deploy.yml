@@ -1,19 +1,33 @@
-name: Deploy GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main  # Change this if your default branch is different
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v18
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          cd site
+          npm install
+
+      - name: Build project
+        run: |
+          cd site
+          npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.3
-        with:
-          branch: gh-pages  # The branch the action should deploy to.
-          folder: site      # The folder you want to deploy
+        run: |
+          cd site
+          npm run deploy
