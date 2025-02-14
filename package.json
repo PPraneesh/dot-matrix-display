@@ -1,6 +1,6 @@
 {
     "name": "dot-matrix-display",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "DOT MATRIX DISPLAY",
     "main": "dist/index.js",
     "module": "dist/index.mjs",

@@ -1,4 +1,4 @@
-# Dot Matrix Display Component
+# Dot Matrix Display
 
 A React component that creates a dot matrix display effect for transitioning between text patterns. Perfect for creating retro-style animated displays or information boards.
 
@@ -45,10 +45,15 @@ const App = () => {
 
 ```typescript
 interface TextItem {
-  pattern: string;      // Main text to display in dot matrix
+  pattern: string;      // Main text to display in dot matrix, Max length is 6
   secondary_text: string; // Subtitle or additional text
 }
 ```
+
+### Pattern Constraints
+
+- Maximum length: 6 characters
+- Supported characters: A-Z, a-z, and space
 
 ## Features
 
