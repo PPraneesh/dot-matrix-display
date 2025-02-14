@@ -46,7 +46,7 @@ const App = () => {
 ### TextItem Interface
 
 ```typescript
-import { TextItem } from 'dot-matrix-display';
+import MatrixDisplay, { TextItem } from 'dot-matrix-display';
 
 const App = () => {
   const texts:TextItem = [
