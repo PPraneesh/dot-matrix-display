@@ -78,7 +78,7 @@ const App = () => {
 
 - Smooth transition effects between texts
 - Customizable transition timing
-- Support for alphanumeric characters
+- Supports only A-Z, a-z and space
 - Secondary text display
 - Retro dot matrix display style
 - Responsive design
