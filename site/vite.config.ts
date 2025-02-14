@@ -5,6 +5,6 @@ export default defineConfig({
   base: '/dot-matrix-display/',
   plugins: [react()],
   build: {
-    outDir: 'docs', // Ensure this is correctly set to 'docs' for GitHub Pages
+    outDir: '../docs', // Ensure this is correctly set to 'docs' for GitHub Pages
   },
 });
